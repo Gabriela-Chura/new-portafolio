@@ -8,11 +8,11 @@ $theme-nav: black;
 
 
 *{
-    outline: 1px solid blue;
+   /* outline: 1px solid blue;*/
     margin: 0;
     padding: 0;
+   
 }
-
 
 
 
@@ -25,7 +25,7 @@ body {
 }
 
 .text-muted {
-    color: darkgray;
+    color: #2e2929;
 }
 
 .text-primary {
@@ -51,6 +51,7 @@ a.active {
 
 a {
     color: $theme-primary;
+    text-decoration: none;
 }
 
 a:hover,
@@ -69,23 +70,47 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
 }
 
-
-
-// Restyled Primary Buttons
-
-.btn-primary {
-    
-    @include heading-font;
-    font-weight: 700;
-}
-
-.btn-xl {
-    @include heading-font;
-    border: 3px solid white;
-    font-weight: 700;
-    border-radius: 3px;
-    font-size: 18px;
-    padding: 20px 40px;
+.button {
+  flex: 1 1 auto;
+    width: 200px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #f7f7f7;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  overflow:hidden;
+  transition: .3s;
+  &:after {
+    position: absolute;
+    transition: .3s;
+    content: '';
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    background: #333131;
+  }
+  &:nth-of-type(1):after {
+    height: 120%;
+    left: -10%;
+    transform: skewX(15deg);
+    z-index: -1;
+  }
+  &:hover {
+    cursor: pointer;
+    &:after {
+      width: 100%;
+      left: 0;
+    }
+    &:nth-of-type(1) {
+      color: $theme-primary;
+    }
+    &:nth-of-type(1):after {
+      left: -10%;
+      width: 120%;
+    }   
+  }
 }
 
 // Custom Navigation Bar
@@ -94,8 +119,8 @@ h1, h2, h3, h4, h5, h6 {
     background-color: $theme-nav;
     border-color: transparent;
     .navbar-brand {
-        color: $theme-nav; 
-        @include body-font;
+        color:white; 
+        @include heading-font;
         &:hover,
         &:focus,
         &:active,
@@ -183,17 +208,17 @@ header {
     background-attachment: scroll;
     background-position: center center;
     @include background-cover;
-    text-align: center;
+    text-align: left;
     color: white;
     .intro-text {
         padding-top: 100px;
         padding-bottom: 50px;
         .intro-lead-in {
-            @include serif-font;
-            font-style: italic;
+            font-family: 'Roboto';
             font-size: 22px;
             line-height: 22px;
             margin-bottom: 25px;
+            color: $theme-primary;
         }
         .intro-heading {
             @include heading-font;
@@ -211,7 +236,7 @@ header {
             padding-top: 300px;
             padding-bottom: 200px;
             .intro-lead-in {
-                @include serif-font;
+                font-family: 'Roboto';
                 font-style: italic;
                 font-size: 40px;
                 line-height: 40px;
@@ -228,7 +253,12 @@ header {
     }
 }
 
-// Global Section Styles
+//SKILLS
+
+#skills{
+    background-image: url(../fotos/pattern.png);
+    background-size: cover;
+}
 
 section {
     padding: 70px 0 0 0;
@@ -236,7 +266,7 @@ section {
     div.text-gray{
         width: 100%;
          @include body-font;
-            color: #c4baba; 
+            color: #272525; 
         img{
             margin-right: 40px;
         }
@@ -287,10 +317,10 @@ hr[role="tournament3"]::before {
 }
 
 // Portfolio Section
-#portafolio {
-  color: white;
+#portfolio {
+  color: $theme-nav;
   text-align: center;
-  padding: 50px 0; 
+  padding: 70px 0; 
 }
   @media screen and (max-width: 480px) {
     .github {
@@ -572,6 +602,66 @@ hr[role="tournament3"]::before {
     }
 }
 
+// CONTACT ME 
+	
+#contact {
+        background-image: url(../fotos/pattern.png);
+
+}
+	section {
+       
+	#services {
+		text-align: center;
+    transform: translatez(0);
+
+		li {
+			width: 120px;
+			height: 140px;
+			display: inline-block;
+			margin: 20px;
+			list-style: none;
+            
+            a{
+                text-decoration: none;
+                &:hover {
+                    color: none;
+                }
+            }
+
+			div {
+				width: 120px;
+				height: 120px;
+				color: white;
+				font-size: 3.4em;
+				text-align: center;
+				line-height: 120px;
+				background-color:$theme-primary;
+				transition: all 0.5s ease;
+
+				&:hover {
+					transform: rotate(360deg);
+					border-radius: 100px;
+				}
+			}
+
+			span {
+				width: 120px;
+				height: 20px;
+				display: block;
+				padding: 15px 0px;
+				color: blue;
+				font-family: 'Advent Pro', sans-serif;
+				text-transform: uppercase;
+				font-size: 1.2em;
+				text-align: center;
+			}
+		}
+	}
+}
+
+	 
+
+//CSS3 animations used to pan, scan and change backgrounds
 
 // Footer
 

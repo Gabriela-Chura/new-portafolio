@@ -1,5 +1,5 @@
 * {
-  outline: 1px solid blue;
+  /* outline: 1px solid blue;*/
   margin: 0;
   padding: 0; }
 
@@ -8,7 +8,7 @@ body {
   font-family: 'Roboto', sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .text-muted {
-  color: darkgray; }
+  color: #2e2929; }
 
 .text-primary {
   color: rgba(181, 159, 66, 0.9); }
@@ -28,7 +28,8 @@ a.active {
   outline: none; }
 
 a {
-  color: rgba(181, 159, 66, 0.9); }
+  color: rgba(181, 159, 66, 0.9);
+  text-decoration: none; }
 
 a:hover,
 a:focus,
@@ -43,24 +44,48 @@ h1, h2, h3, h4, h5, h6 {
 .img-centered {
   margin: 0 auto; }
 
-.btn-primary {
-  font-family: 'Lobster', cursive, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700; }
-
-.btn-xl {
-  font-family: 'Lobster', cursive, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  border: 3px solid white;
-  font-weight: 700;
-  border-radius: 3px;
-  font-size: 18px;
-  padding: 20px 40px; }
+.button {
+  flex: 1 1 auto;
+  width: 200px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #f7f7f7;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  transition: .3s; }
+  .button:after {
+    position: absolute;
+    transition: .3s;
+    content: '';
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    background: #333131; }
+  .button:nth-of-type(1):after {
+    height: 120%;
+    left: -10%;
+    transform: skewX(15deg);
+    z-index: -1; }
+  .button:hover {
+    cursor: pointer; }
+    .button:hover:after {
+      width: 100%;
+      left: 0; }
+    .button:hover:nth-of-type(1) {
+      color: rgba(181, 159, 66, 0.9); }
+    .button:hover:nth-of-type(1):after {
+      left: -10%;
+      width: 120%; }
 
 .navbar-custom {
   background-color: black;
   border-color: transparent; }
   .navbar-custom .navbar-brand {
-    color: black;
-    font-family: 'Roboto', sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    color: white;
+    font-family: 'Lobster', cursive, "Helvetica Neue", Helvetica, Arial, sans-serif; }
     .navbar-custom .navbar-brand:hover, .navbar-custom .navbar-brand:focus, .navbar-custom .navbar-brand:active, .navbar-custom .navbar-brand.active {
       color: rgba(181, 159, 66, 0.9); }
   .navbar-custom .navbar-collapse {
@@ -120,18 +145,17 @@ header {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  text-align: center;
+  text-align: left;
   color: white; }
   header .intro-text {
     padding-top: 100px;
     padding-bottom: 50px; }
     header .intro-text .intro-lead-in {
-      font-family: 'Open Sans', sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
-      text-transform: uppercase;
-      font-style: italic;
+      font-family: 'Roboto';
       font-size: 22px;
       line-height: 22px;
-      margin-bottom: 25px; }
+      margin-bottom: 25px;
+      color: rgba(181, 159, 66, 0.9); }
     header .intro-text .intro-heading {
       font-family: 'Lobster', cursive, "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: 700;
@@ -144,8 +168,7 @@ header {
     padding-top: 300px;
     padding-bottom: 200px; }
     header .intro-text .intro-lead-in {
-      font-family: 'Open Sans', sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
-      text-transform: uppercase;
+      font-family: 'Roboto';
       font-style: italic;
       font-size: 40px;
       line-height: 40px;
@@ -156,12 +179,16 @@ header {
       font-size: 75px;
       line-height: 75px;
       margin-bottom: 50px; } }
+#skills {
+  background-image: url(../fotos/pattern.png);
+  background-size: cover; }
+
 section {
   padding: 70px 0 0 0; }
   section div.text-gray {
     width: 100%;
     font-family: 'Roboto', sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #c4baba; }
+    color: #272525; }
     section div.text-gray img {
       margin-right: 40px; }
     @media (max-width: 680px) {
@@ -196,10 +223,10 @@ hr[role="tournament3"]::before {
 @media (min-width: 768px) {
   section {
     padding: 150px 0; } }
-#portafolio {
-  color: white;
+#portfolio {
+  color: black;
   text-align: center;
-  padding: 50px 0; }
+  padding: 70px 0; }
 
 @media screen and (max-width: 480px) {
   .github {
@@ -423,6 +450,45 @@ hr[role="tournament3"]::before {
         margin-top: 40px; }
     .timeline > li.timeline-inverted > .timeline-panel {
       padding: 0 100px 20px 20px; } }
+#contact {
+  background-image: url(../fotos/pattern.png); }
+
+section #services {
+  text-align: center;
+  transform: translatez(0); }
+  section #services li {
+    width: 120px;
+    height: 140px;
+    display: inline-block;
+    margin: 20px;
+    list-style: none; }
+    section #services li a {
+      text-decoration: none; }
+      section #services li a:hover {
+        color: none; }
+    section #services li div {
+      width: 120px;
+      height: 120px;
+      color: white;
+      font-size: 3.4em;
+      text-align: center;
+      line-height: 120px;
+      background-color: rgba(181, 159, 66, 0.9);
+      transition: all 0.5s ease; }
+      section #services li div:hover {
+        transform: rotate(360deg);
+        border-radius: 100px; }
+    section #services li span {
+      width: 120px;
+      height: 20px;
+      display: block;
+      padding: 15px 0px;
+      color: blue;
+      font-family: 'Advent Pro', sans-serif;
+      text-transform: uppercase;
+      font-size: 1.2em;
+      text-align: center; }
+
 footer {
   padding: 25px 0;
   text-align: center; }
