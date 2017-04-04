@@ -208,7 +208,7 @@ header {
     background-attachment: scroll;
     background-position: center center;
     @include background-cover;
-    text-align: left;
+    text-align: center;
     color: white;
     .intro-text {
         padding-top: 100px;
@@ -267,14 +267,33 @@ section {
         width: 100%;
          @include body-font;
             color: #272525; 
-        img{
-            margin-right: 40px;
+        img {
+            margin: 0 20px;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+        }
+        img:hover {
+            -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+            -webkit-transform: scale(1.3);
+	        transform: scale(1.3);
         }
         
         @media(max-width:680px){
            img{
-            margin-right:0px;
+            margin: 0 10px;
+            width: 150px;
         }
+            p{
+                font-size: 10px;
+            }
+            
         }
         
         p{

@@ -145,7 +145,7 @@ header {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  text-align: left;
+  text-align: center;
   color: white; }
   header .intro-text {
     padding-top: 100px;
@@ -190,10 +190,26 @@ section {
     font-family: 'Roboto', sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #272525; }
     section div.text-gray img {
-      margin-right: 40px; }
+      margin: 0 20px;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+      -webkit-transition: .3s ease-in-out;
+      transition: .3s ease-in-out;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-transition: .3s ease-in-out;
+      transition: .3s ease-in-out; }
+    section div.text-gray img:hover {
+      -webkit-filter: grayscale(0);
+      filter: grayscale(0);
+      -webkit-transform: scale(1.3);
+      transform: scale(1.3); }
     @media (max-width: 680px) {
       section div.text-gray img {
-        margin-right: 0px; } }
+        margin: 0 10px;
+        width: 150px; }
+      section div.text-gray p {
+        font-size: 10px; } }
     section div.text-gray p {
       font-size: 15px; }
   section h2.section-heading {
