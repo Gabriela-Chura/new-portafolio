@@ -1,8 +1,8 @@
-
+@import "cat";
 @import "mixins.scss";
 
-$theme-primary:    rgba(181, 159, 66, 0.9);
-$theme-nav: black; 
+$theme-primary:    rgba(235, 227, 192, 0.9);
+$theme-nav: rgba(242, 210, 151, 0.84); 
 
 
 
@@ -26,6 +26,7 @@ body {
 
 .text-muted {
     color: #2e2929;
+     text-align: justify;
 }
 
 .text-primary {
@@ -72,15 +73,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .button {
   flex: 1 1 auto;
-    width: 200px;
+  width: 200px;
   margin: 0 auto;
   padding: 20px;
-  border: 2px solid #f7f7f7;
+  border: 2px solid rgba(111, 96, 96, 0.51);
   text-align: center;
   text-transform: uppercase;
   position: relative;
   overflow:hidden;
   transition: .3s;
+ color: rgba(111, 96, 96, 0.51);
   &:after {
     position: absolute;
     transition: .3s;
@@ -113,6 +115,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+
 // Custom Navigation Bar
 
 .navbar-custom {
@@ -129,7 +132,7 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
     .navbar-collapse {
-        border-bottom: 2px solid black;
+        
         
     }
     .navbar-toggle {
@@ -139,6 +142,7 @@ h1, h2, h3, h4, h5, h6 {
         color: white;
         font-size: 12px;
          border-bottom: 2px solid red;
+        
         &:hover,
         &:focus {
             background-color: $theme-primary;
@@ -150,6 +154,7 @@ h1, h2, h3, h4, h5, h6 {
                 @include body-font;
                 font-weight: 400;
                 letter-spacing: 1px;
+                 text-shadow: 1px 1px black;
                 color: white;
                 &:hover,
                 &:focus {
@@ -203,7 +208,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
-    background-image: url('../fotos/_MG_4787.JPG');
+    background-image: url('../fotos/1994.png');
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
@@ -223,11 +228,13 @@ header {
         .intro-heading {
             @include heading-font;
             font-weight: 700;
-            font-size: 50px;
+            font-size: 200px;
             line-height: 50px;
             margin-bottom: 25px;
         }
     }
+    
+    
 }
 
 @media(min-width:768px) {
@@ -245,9 +252,9 @@ header {
             .intro-heading {
                 @include heading-font;
                 font-weight: 700;
-                font-size: 75px;
+                font-size: 100px;
                 line-height: 75px;
-                margin-bottom: 50px;
+                margin-top: 200px;
             }
         }
     }
@@ -262,7 +269,6 @@ header {
 
 section {
     padding: 70px 0 0 0;
-
     div.text-gray{
         width: 100%;
          @include body-font;
@@ -293,7 +299,9 @@ section {
             p{
                 font-size: 10px;
             }
-            
+            h2{
+                font-size: 20px;
+            }
         }
         
         p{
@@ -654,7 +662,7 @@ hr[role="tournament3"]::before {
 				font-size: 3.4em;
 				text-align: center;
 				line-height: 120px;
-				background-color:$theme-primary;
+				background-color: rgba(145, 152, 167, 0.62);
 				transition: all 0.5s ease;
 
 				&:hover {

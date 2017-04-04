@@ -3,17 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Document</title>
+    <title>Mi portafolio</title>
+    <link rel="icon" href="images/16083%20(1).png" type="image/x-icon"/>
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="animate.css/animate.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="aos-master/dist/aos.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body id="page-top" class="index">
 
+    <div class="loading">
+    <div class="cat loading-title">
+	<div class="ear ear--left"></div>
+	<div class="ear ear--right"></div>
+	<div class="face">
+		<div class="eye eye--left">
+			<div class="eye-pupil"></div>
+		</div>
+		<div class="eye eye--right">
+			<div class="eye-pupil"></div>
+		</div>
+		<div class="muzzle"></div>
+	</div>
+</div>
+    <div class="loading-progress"></div>
+  </div>
 
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
@@ -44,8 +62,7 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <div class="intro-text">
-                <div class="intro-lead-in">Hola, soy Gabriela: </div>
+            <div class="intro-text" data-aos="flip-left">
                 <div class="intro-heading">¡Welcome!</div>
             </div>
         </div>
@@ -59,16 +76,18 @@
                     <h2 class="section-heading">Sobre mí ─  O1 </h2>
                 </div>
                 <div class="col-md-10 col-xs-12">
-                    <div class="text-gray">
+                    <div class="text-gray" data-aos="zoom-out-down">
                     <h2 class="service-heading">El primer paso para triunfar es saber lo que se quiere, el segundo tener el valor de decirlo y el tercero llenarnos de fuerza y coraje para realizarlo.</h2>
                     <hr role="tournament3">
                     <p class="text-muted">Hola, soy Gabriela coder egresada de Laboratoria con el título de Frontend Develepor Jr. Desarrollo páginas web en HTML /CSS /Javascript. <p class="hidden-xs">Me considero una persona responsable, dedicada, amante de los animales, del diseño web y de adquirir nuevos conocimientos además creo que, el trabajo en equipo es capaz de crear grandes cosas. </p>
 </p>
                      <br>
+                     <br>
                     <img src="fotos/titi.png" alt="" width="100px;" class="hidden-xs">
                     <img src="fotos/lbor.png" alt="" width="200px;">
                     <img src="fotos/afiche.png" alt="" width="100px;" class="hidden-xs">
-                    
+                    <br>
+                    <br>
                     </div>
                 </div>
             </div>
@@ -91,7 +110,7 @@
                                 <div class="timeline-heading text-center">
                                     <h4 class="subheading">Responsive Web Design</h4>
                                 </div>
-                                <div class="timeline-body">
+                                <div class="timeline-body" data-aos="fade-right">
                                     <p class="text-muted">Desarrollo web veloz y flexible con Bootstrap, códigos HTML5 y CSS3.</p>
                                     <img src="fotos/bootstrap.png" alt="" width="40px;">
                                     <img src="fotos/css.png" alt="" width="40px;">
@@ -107,7 +126,7 @@
                                 <div class="timeline-heading text-center">
                                     <h4 class="subheading"> Lenguaje de programación interpretado</h4>
                                 </div>
-                                <div class="timeline-body">
+                                <div class="timeline-body" data-aos="fade-left">
                                     <p class="text-muted">Todos los navegadores modernos interpretan el código JavaScript integrado en las páginas web. JS cuenta con dos populares frameworks como lo son jQuery y Angular.js</p>
                                     <img src="fotos/angular.png" alt="" width="40px;">
                                     <img src="fotos/jquery-icon.png" alt="" width="40px;">
@@ -118,7 +137,7 @@
                             <div class="timeline-image">
                                 <img class="img-circle img-responsive" src="fotos/adobe.png">
                             </div>
-                            <div class="timeline-panel">
+                            <div class="timeline-panel" data-aos="fade-right">
                                 <div class="timeline-heading text-center">
                                     <h4 class="subheading">Diseño gráfico</h4>
                                 </div>
@@ -135,7 +154,7 @@
                             <div class="timeline-image">
                                 <img class="img-circle img-responsive" src="fotos/github-logo-icon-30.png" alt="">
                             </div>
-                            <div class="timeline-panel">
+                            <div class="timeline-panel" data-aos="fade-left">
                                 <div class="timeline-heading text-center">
                                     <h4 class="subheading">Herramientas de producción</h4>
                                 </div>
@@ -158,7 +177,7 @@
     </section>
     <!-- Portfolio Grid Section -->
     <section id="portfolio">
-        <div class="container text-center">
+        <div class="container text-center" data-aos="zoom-out-down">
          <h3>Si quieres saber más sobre mis proyectos te invito a revisar mi github</h3>
            <a href="https://github.com/Gabriella1127" style="text-decoration:none;"><div class="button" style="font-size: 20px;"> GITHUB<i class="fa fa-angle-double-down" aria-hidden="true"></i></div></a>
            <br>
@@ -199,8 +218,8 @@
                     <div class="hovereffect">
            <img src="images/4.jpg" alt="" width="100%;">
         <div class="overlay">
-           <h2 id="titulo">Personal Page</h2>
-           <a class="info" href="https://gabriella1127.github.io/mypage/"> My page </a>
+           <h2 id="titulo">Carrocomp!</h2>
+           <a class="info" href="https://github.com/Gabriella1127/evaluacion_frontend"> Examen Front-End </a>
         </div>
     </div>                  
                 </div>
@@ -233,7 +252,7 @@
                 <div class="col-lg-2 text-center">
                     <h2 class="section-heading hidden-xs">Contactame ─  O3</h2>
                 </div>
-                <div class="col-lg-10 col-xs-12">
+                <div class="col-lg-10 col-xs-12" data-aos="zoom-out-down">
                    
 		<ul  id="services">
       
@@ -241,8 +260,9 @@
       <li><a href="https://twitter.com/brielissei?lang=es"><div class="fa fa-twitter"></div><span></a></li>
       <li><a href="https://plus.google.com/u/0/112273587026973072778"><div class=" fa fa-google-plus"></div><span></a></li>
       <li><a href="https://www.linkedin.com/in/gabriela-natalia-chura-perez-657556138/"><div class="fa fa-linkedin"></div><span></a></li>
+      <a href="https://drive.google.com/file/d/0B0GEJQkqiZfmQW91WmVka1VHRGM/view?usp=sharing" style="text-decoration:none;"><div class="button" style="font-size: 20px;"> Mi CV <i class="fa fa-angle-double-down" aria-hidden="true"></i></div></a>	
   </ul>
-    <a href="https://github.com/Gabriella1127" style="text-decoration:none;"><div class="button" style="font-size: 20px;"> Mi CV<i class="fa fa-angle-double-down" aria-hidden="true"></i></div></a>	
+    
                 </div>
             </div>
            
@@ -255,10 +275,27 @@
             </div>
         </div>
     </footer>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="aos-master/dist/aos.js"></script>
     <script src="js/main.js"></script>
     
+     <script>
+			AOS.init({
+				easing: 'ease-out-back',
+				duration: 1000
+			});
+		</script>
 
+		<script>
+			hljs.initHighlightingOnLoad();
+
+			$('.hero__scroll').on('click', function(e) {
+				$('html, body').animate({
+					scrollTop: $(window).height()
+				}, 1200);
+			});
+		</script>
 </body>
 </html>
