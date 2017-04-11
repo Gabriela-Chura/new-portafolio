@@ -7,9 +7,9 @@
     <link rel="icon" href="images/16083%20(1).png" type="image/x-icon"/>
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="animate.css/animate.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="aos-master/dist/aos.css">
     <link rel="stylesheet" href="css/main.css">
@@ -31,6 +31,13 @@
 	</div>
 </div>
     <div class="loading-progress"></div>
+    
+      <div class="intro-text hidden-xs" data-aos="flip-left">
+                <div class="intro-heading">¡Welcome!</div>
+            </div>
+        <div class="intro-text text-center visible-xs" data-aos="flip-left">
+                <h3>Loading. . </h3>
+            </div>
   </div>
 
     <!-- Navigation -->
@@ -58,13 +65,10 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-
     <!-- Header -->
     <header>
         <div class="container">
-            <div class="intro-text" data-aos="flip-left">
-                <div class="intro-heading hidden-xs">¡Welcome!</div>
-            </div>
+          
         </div>
     </header>
 
@@ -72,14 +76,13 @@
     <section id="about">
         <div class="container">
             <div class="row text-center">
-                <div class="col-md-2 hidden-xs">
-                    <h2 class="section-heading">Sobre mí ─  O1 </h2>
-                </div>
-                <div class="col-md-10 col-xs-12">
+                <div class="col-lg-12 col-xs-12">
+                   <h2 class="section-heading hidden-xs">Sobre mí ─  O1 </h2>
+                   <h2 class="visible-xs">Sobre mí ─  O1 </h2>
                     <div class="text-gray" data-aos="zoom-out-down">
                     <h2 class="service-heading">El primer paso para triunfar es saber lo que se quiere, el segundo tener el valor de decirlo y el tercero llenarnos de fuerza y coraje para realizarlo.</h2>
                     <hr role="tournament3">
-                    <p class="text-muted">Hola, soy Gabriela coder egresada de Laboratoria con el título de Frontend Develepor Jr. Desarrollo páginas web en HTML /CSS /Javascript. <p class="hidden-xs">Me considero una persona responsable, dedicada, amante de los animales, del diseño web y de adquirir nuevos conocimientos además creo que, el trabajo en equipo es capaz de crear grandes cosas. </p>
+                    <p>Hola, soy Gabriela coder egresada de Laboratoria con el título de Frontend Develepor Jr. Desarrollo páginas web en HTML /CSS /Javascript. <p class="hidden-xs">Me considero una persona responsable, dedicada, amante de los animales, del diseño web y de adquirir nuevos conocimientos además creo que, el trabajo en equipo es capaz de crear grandes cosas. </p>
 </p>
                      <br>
                      <br>
@@ -97,10 +100,10 @@
     <section id="skills">
         <div class="container">
             <div class="row">
-               <div class="col-lg-2 text-center hidden-xs">
-                    <h2 class="section-heading">Habilidades ─  O2</h2>
-                </div>
-                <div class="col-lg-10">
+                <div class="col-lg-12">
+                   <h2 class="section-heading hidden-xs">Habilidades ─  O2</h2>
+                   <h2 class="visible-xs">Habilidades ─  O2</h2>
+                   <br>
                     <ul class="timeline">
                         <li>
                             <div class="timeline-image">
@@ -249,11 +252,9 @@
     <section id="contact">
         <div class="container">
             <div class="row">
-                <div class="col-lg-2 text-center">
-                    <h2 class="section-heading hidden-xs">Contactame ─  O3</h2>
-                </div>
-                <div class="col-lg-10 col-xs-12" data-aos="zoom-out-down">
-                   
+                <div class="col-lg-12 col-xs-12" data-aos="zoom-out-down">
+                    <h2 class="section-heading hidden-xs">Contáctame ─  O3</h2>
+                    <h3 class="visible-xs">Contáctame ─  O3</h3>
 		<ul  id="services">
       
       <li><a href="https://www.facebook.com/GB.1127"><div class="fa fa-facebook"></div><span></span></a></li>
@@ -269,33 +270,17 @@
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-               <hr role="tournament3">
-            </div>
-        </div>
-    </footer>
-    
+   <script src="jquery/dist/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="aos-master/dist/aos.js"></script>
+    <script src="aos-master/dist/aos.js"></script>   
     <script src="js/main.js"></script>
-    
-     <script>
+    <script>
 			AOS.init({
 				easing: 'ease-out-back',
 				duration: 1000
 			});
 		</script>
-
-		<script>
-			hljs.initHighlightingOnLoad();
-
-			$('.hero__scroll').on('click', function(e) {
-				$('html, body').animate({
-					scrollTop: $(window).height()
-				}, 1200);
-			});
-		</script>
+     
 </body>
 </html>

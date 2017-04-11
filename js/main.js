@@ -17,7 +17,11 @@ const fakeLoaderInterval = window.setInterval(function() {
 }, getRandomArbitrary(100, 500));
 
 
-
+$('.hero__scroll').on('click', function(e) {
+				$('html, body').animate({
+					scrollTop: $(window).height()
+				}, 1200);
+			});
 
 (function($) {
     "use strict"; // Start of use strict

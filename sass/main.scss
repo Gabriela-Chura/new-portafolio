@@ -2,13 +2,13 @@
 @import "mixins.scss";
 
 $theme-primary:    rgba(235, 227, 192, 0.9);
-$theme-nav: rgba(242, 210, 151, 0.84); 
+$theme-nav: rgba(235, 206, 155, 0.63); 
 
 
 
 
 *{
-   /* outline: 1px solid blue;*/
+  /*outline: 1px solid blue;*/
     margin: 0;
     padding: 0;
    
@@ -72,6 +72,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .button {
+  @include heading-font;
   flex: 1 1 auto;
   width: 200px;
   margin: 0 auto;
@@ -212,54 +213,28 @@ header {
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
+    height: 620px;
     @include background-cover;
     text-align: center;
     color: white;
-    .intro-text {
-        padding-top: 100px;
-        padding-bottom: 50px;
-        .intro-lead-in {
-            font-family: 'Roboto';
-            font-size: 22px;
-            line-height: 22px;
-            margin-bottom: 25px;
-            color: $theme-primary;
-        }
-        .intro-heading {
-            @include heading-font;
-            font-weight: 700;
-            font-size: 200px;
-            line-height: 50px;
-            margin-bottom: 25px;
-        }
-    }
-    
     
 }
 
-@media(min-width:768px) {
-    header {
-        .intro-text {
+ .intro-text {
             padding-top: 300px;
             padding-bottom: 200px;
-            .intro-lead-in {
-                font-family: 'Roboto';
-                font-style: italic;
-                font-size: 40px;
-                line-height: 40px;
-                margin-bottom: 25px;
-            }
             .intro-heading {
                 @include heading-font;
                 font-weight: 700;
                 font-size: 100px;
                 line-height: 75px;
-                margin-top: 200px;
+                position: absolute;
+                top: 300px;
+                left: 480px;
+                color: white;
             }
         }
-    }
-}
-
+    
 
 
 //SKILLS
@@ -273,6 +248,7 @@ section {
     padding: 70px 0 0 0;
     div.text-gray{
         width: 100%;
+        padding-left: 100px;
          @include body-font;
             color: #272525; 
         img {
@@ -293,6 +269,10 @@ section {
 	        transform: scale(1.3);
         }
         
+        p{
+            font-size: 15px;
+        }
+        
         @media(max-width:680px){
            img{
             margin: 0 10px;
@@ -306,17 +286,23 @@ section {
             }
         }
         
-        p{
-            font-size: 15px;
-        }
+        
     }
     
     h2.section-heading {
         font-size: 20px;
         writing-mode: vertical-lr;
         transform: rotate(180deg);
+        letter-spacing: 5px;
+        position: absolute;
+       
     }
    
+    @media(max-width:680px){
+           div.text-gray{
+                padding-left: 0px;
+            }
+    }
 }
 
 hr[role="tournament3"] {
@@ -335,8 +321,12 @@ hr[role="tournament3"]::before {
     padding: 0px;
     transform: rotate(180deg);
     left: 50%;
-    margin: -5px 0px 0px -21px;
+    margin: -5px 0px 0px 40px;
     content: "";
+    
+    @media(max-width:680px){
+           margin: -5px 0px 0px -10px;
+    }
 }
 
 @media(min-width:768px) {
@@ -347,7 +337,7 @@ hr[role="tournament3"]::before {
 
 // Portfolio Section
 #portfolio {
-  color: $theme-nav;
+  color: rgba(21, 20, 20, 0.99);
   text-align: center;
   padding: 70px 0; 
 }
@@ -363,7 +353,8 @@ hr[role="tournament3"]::before {
     }
 
 #titulo {
-     @include body-font;
+     @include heading-font;
+    letter-spacing: 15px;    
 }
 
 /*-----------------------------HOVEREFFECTS-------------------*/
@@ -688,25 +679,4 @@ hr[role="tournament3"]::before {
 	}
 }
 
-	 
-
-//CSS3 animations used to pan, scan and change backgrounds
-
-// Footer
-
-footer {
-    padding: 25px 0;
-    text-align: center;
-    span.copyright {
-        line-height: 40px;
-        @include heading-font;
-        text-transform: none;
-    }
-    ul.quicklinks {
-        margin-bottom: 0;
-        line-height: 40px;
-        @include heading-font;
-        text-transform: none;
-    }
-}
 
